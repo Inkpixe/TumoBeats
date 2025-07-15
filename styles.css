@@ -1,14 +1,19 @@
+*
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 html {
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: lightgray;
+background-color: #294e98;
+height: 100dvh;
 }
-
 
 body {
 display:grid;
-grid-template-rows: 15dvh auto 50dvh auto 50dvh;
+grid-template-rows: 70px auto 32px auto 32px;
 grid-template-areas:
 'title title open'
 'beats beats beats'
@@ -16,27 +21,71 @@ grid-template-areas:
 'previous playpause next'
 'volume volume tumo';
 
-width: 40dvh;
-height: 10dvh;
+width: 600px;
+height: 600px;
 grid-template-columns: 40% auto 40%;
+background-color: #d86f92;
+border-radius: 50px ;
+overflow: auto;
+}
+
+button
+{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+button:active 
+{
+    scale: 0.8;
 }
 
 #title {
-color: black;
+color:#93D870;
 margin: 0px;
 grid-area: title;
+font-size: 37px;
+padding-left: 40px;
+padding-top: 25px;
 }
 
 #file-input {
 grid-area: open;
+position: relative;
+padding-top: 25px;
+padding-left: 75px;
+ display: flex;
+ align-items: center;
+    justify-content: center;
 }
+#inv
+{
+    color: transparent;
+    background-color: blue;
+    opacity: 00%;
+    position: absolute;
+    scale: 100%;
+    padding-top: 80px;
+    padding-left: 250px;
+    inset: 0;
+    display: flex;
+    align-self:center;
+}
+
 
 #beats {
 grid-area: beats;
+display: flex;
+justify-content: center;
 }
+
 
 #scrub-input {
 grid-area: scrub;
+position: relative;
+display: flex;
+justify-content: center;
+
 }
 
 #previous-button {
@@ -48,11 +97,57 @@ grid-area: playpause;
 #next-button {
 grid-area: next;
 }
-
+.scrub-bar 
+{
+    position: absolute;
+    inset: 0;
+    background-color: #93D870;
+    border-radius: 30px;
+    pointer-events: none;
+    transform: scaleX(0.5);
+    transform-origin: left;
+    justify-content: center;
+}
 #volume-input {
 grid-area: volume;
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+input[type="range"]
+{
+    width: 100%;
+    flex: 1;
+    opacity: 0;
 }
 
 #tumo {
 grid-area: tumo;
+}
+.square 
+{
+    scale: 30;
+    opacity: 50%;
+    z-index: -2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+        margin-top: -50px;
+     margin-left: -50px;
+}
+.circle
+{
+    scale: 11;
+    opacity: 20%;
+    z-index: -1;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+
+   
 }
