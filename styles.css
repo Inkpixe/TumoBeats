@@ -27,6 +27,9 @@ grid-template-columns: 40% auto 40%;
 background-color: #d86f92;
 border-radius: 50px ;
 overflow: auto;
+box-shadow: 0px 0px 60px 15px #d57c9a,
+0px 0px 150px 95px #4e5f82,
+0px 0px 500px 150px #252e43;
 }
 
 button
@@ -34,6 +37,7 @@ button
     background-color: transparent;
     cursor: pointer;
     border: none;
+    
 }
 button:active 
 {
@@ -57,6 +61,7 @@ padding-left: 75px;
  display: flex;
  align-items: center;
     justify-content: center;
+    
 }
 #inv
 {
@@ -79,17 +84,18 @@ display: flex;
 justify-content: center;
 }
 
-
 #scrub-input {
 grid-area: scrub;
 position: relative;
 display: flex;
 justify-content: center;
 
+
 }
 
 #previous-button {
 grid-area: previous;
+
 }
 #play-stop-button {
 grid-area: playpause;
@@ -101,25 +107,28 @@ grid-area: next;
 {
     position: absolute;
     inset: 0;
-    background-color: #93D870;
+    background-color: #9bda7b;
     border-radius: 30px;
     pointer-events: none;
     transform: scaleX(0.5);
     transform-origin: left;
     justify-content: center;
+        box-shadow: 0px 0px 10px 3px #9bda7b;
 }
 #volume-input {
 grid-area: volume;
 position: relative;
 display: flex;
 justify-content: center;
+left: 30px;
+bottom: 10px;
 }
 
 input[type="range"]
 {
     width: 100%;
     flex: 1;
-    opacity: 0;
+    opacity: 10;
 }
 
 #tumo {
@@ -128,7 +137,7 @@ grid-area: tumo;
 .square 
 {
     scale: 30;
-    opacity: 50%;
+    opacity: 60%;
     z-index: -2;
     position: absolute;
     top: 50%;
@@ -137,17 +146,18 @@ grid-area: tumo;
     height: 100px;
         margin-top: -50px;
      margin-left: -50px;
+     
 }
 .circle
 {
     scale: 11;
-    opacity: 20%;
+    opacity: 100%;
     z-index: -1;
    position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -50px;
     margin-left: -50px;
-
+    circle-sha
    
 }
