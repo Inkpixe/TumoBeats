@@ -108,7 +108,7 @@ grid-area: next;
     position: absolute;
     inset: 0;
     background-color: #9bda7b;
-    border-radius: 30px;
+    border-radius: 300px;
     pointer-events: none;
     transform: scaleX(0.5);
     transform-origin: left;
@@ -121,14 +121,13 @@ position: relative;
 display: flex;
 justify-content: center;
 left: 30px;
-bottom: 10px;
 }
 
 input[type="range"]
 {
     width: 100%;
     flex: 1;
-    opacity: 10;
+    opacity: 0;
 }
 
 #tumo {
@@ -147,4 +146,8 @@ grid-area: tumo;
         margin-top: -50px;
      margin-left: -50px;
      
+}
+
+#icon-pause {
+    display: none;
 }
