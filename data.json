@@ -1,18 +1,35 @@
 [
     {
-        "title":"musica 1",
+        "title":"Into the Fire",
         "url": "audios/music01.mp3"
     },
     {
-        "title":"musica 2",
+        "title":"Anamanaguchi",
         "url": "audios/music02.mp3"
     },
     {
-        "title":"musica 3",
+        "title":"Secret Liaisons",
         "url": "audios/music03.mp3"
     },
     {
-        "title":"musica 4",
+        "title":"C418",
         "url": "audios/music04.mp3"
+    },
+      {
+        "title":"The Cyber Grind",
+        "url": "audios/music05.mp3"
+    },
+     {
+        "title":"Sonic Heroes",
+        "url": "audios/music06.mp3"
+    },
+     {
+        "title":"Live and Learn",
+        "url": "audios/music07.mp3"
+    },
+     {
+        "title":"Escaping the City",
+        "url": "audios/music08.mp3"
     }
+
 ]
