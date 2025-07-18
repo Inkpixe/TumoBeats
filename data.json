@@ -30,6 +30,18 @@
      {
         "title":"Escaping the City",
         "url": "audios/music08.mp3"
+    },
+     {
+        "title":"Creedence Clearwater Revival",
+        "url": "audios/music09.mp3"
+    },
+     {
+        "title":"Phight!",
+        "url": "audios/music10.mp3"
+    },
+     {
+        "title":"Back in Black",
+        "url": "audios/music11.mp3"
     }
-
+    
 ]

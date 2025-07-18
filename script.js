@@ -5,11 +5,15 @@ window.onload = async function ()
     //Pedido da internet
 let request = await fetch("data.json");
 let audioData = await request.json();
-
-if("serviceWorker" in navigator)
-{
-    navigator.serviceWorker.register("service-worker.js")
-}
+//https://github.com/Borewit/music-metadata
+// if("serviceWorker" in navigator)
+// {
+//     navigator.serviceWorker.register("service-worker.js")
+// }
+// if("jsmediatags" in navigator)
+//  {
+//      navigator.serviceWorker.register("jsmediatags.js")
+//  }
 
     //Variáveis
     let title = document.querySelector("#title");
@@ -22,6 +26,7 @@ if("serviceWorker" in navigator)
     let fileInput = document.querySelector("#inv");
     let audio = document.querySelector("audio");
     let currentMusic = 0;
+    let pauseTime = 0;
     
 //Fim de variáveis
 
@@ -84,9 +89,13 @@ if("serviceWorker" in navigator)
         if(audio.paused) 
             {
                 playAudio();
+             audio.currentTime = pauseTime;
+             pauseTime = 0;
             }
         else
             {
+
+                pauseTime = audio.currentTime;
                 pauseAudio();
             }
 
@@ -129,6 +138,12 @@ if("serviceWorker" in navigator)
       playIcon.style.display="none";
       pauseIcon.style.display="block";
     }
+
+    audio.onended = function() 
+    {
+        nextButton.click();
+    }
+
     function scrubAudio(value) 
     {
         if(!audio.src) return;
