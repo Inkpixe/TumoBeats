@@ -6,10 +6,10 @@ window.onload = async function ()
 let request = await fetch("data.json");
 let audioData = await request.json();
 //https://github.com/Borewit/music-metadata
-// if("serviceWorker" in navigator)
-// {
-//     navigator.serviceWorker.register("service-worker.js")
-// }
+if("serviceWorker" in navigator)
+{
+    navigator.serviceWorker.register("service-worker.js")
+}
 // if("jsmediatags" in navigator)
 //  {
 //      navigator.serviceWorker.register("jsmediatags.js")
